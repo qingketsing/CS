@@ -6,5 +6,6 @@ int main(){
         insertnode(L,i,i);
         i++;
     }
+    checkelem(L,2);
     Travellist(L);
 }
