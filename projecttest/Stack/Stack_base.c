@@ -13,7 +13,6 @@ int PushStack(SQstack *s,int elem){
     s->top++;
     int i =s->top;
     s->sqlist[i] = elem;
-    printf("OK,%d\n",s->top);
     return 0;
 }
 
@@ -28,13 +27,14 @@ int PopStack(SQstack *s,int *rt){
 
     *rt = s->sqlist[s->top];
     s->top--;
-    printf("now the top is %d",s->top);
+    printf("now the top is %d\n",s->top);
     return 0;
 }
 
 int TravelStack(SQstack s){
     for(int i = 0;i<s.top+1;i++){
-        printf("%d\n",s.sqlist[i]);
+        printf("%d,",s.sqlist[i]);
     }
+    printf("\n");
     return 0;
 }
